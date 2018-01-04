@@ -10,11 +10,11 @@
     <FrameLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="300dp" >
+        android:layout_height="match_parent" >
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:id="@+id/ivPersonAvatar"
             android:layout_gravity="center_horizontal" />
 
@@ -32,47 +32,47 @@
             android:id="@+id/frameLayout" >
 
             <LinearLayout
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" >
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/colorBlack"
                     android:layout_gravity="center"
                     android:id="@+id/tvLastName" />
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/colorBlack"
                     android:layout_gravity="center"
                     android:id="@+id/tvFirstName" />
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/colorBlack"
                     android:layout_gravity="center"
                     android:id="@+id/tvEmail" />
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/colorBlack"
                     android:layout_gravity="center"
                     android:id="@+id/tvCompany" />
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/colorBlack"
                     android:layout_gravity="center"
                     android:id="@+id/tvStartDate" />
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/colorBlack"

@@ -76,19 +76,19 @@ public class Util {
             URL url = new URL(path);
             HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
             urlConnection.setRequestMethod("GET");
-            urlConnection.setRequestProperty("Request Version", "HTTP/1.1");
-            urlConnection.setRequestProperty("Host", "https://s3-us-west-2.amazonaws.com");
-            urlConnection.setRequestProperty("Connection", "close");
-            urlConnection.setRequestProperty("Accept", "application/json, text/javascript, */*");
-            urlConnection.setRequestProperty("Origin","https://s3-us-west-2.amazonaws.com");
-            urlConnection.setRequestProperty("X-Requested-With", "XMLHttpRequest");
-            urlConnection.setRequestProperty("USER-AGENT", "Mozilla/5.0 (Windows " +
-                    "NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) " +
-                    "Chrome/48.0.2564.116 Safari/537.36");
-            urlConnection.setRequestProperty("Content-Type","application/x-www-form-urlencoded");
-            urlConnection.setRequestProperty("Accept-Encoding", "gzip, deflate");
-            urlConnection.setRequestProperty("ACCEPT-LANGUAGE", "en-US;" +
-                    "q=0.6,en;q=0.4");
+//            urlConnection.setRequestProperty("Request Version", "HTTP/1.1");
+//            urlConnection.setRequestProperty("Host", "https://s3-us-west-2.amazonaws.com");
+//            urlConnection.setRequestProperty("Connection", "close");
+//            urlConnection.setRequestProperty("Accept", "application/json, text/javascript, */*");
+//            urlConnection.setRequestProperty("Origin","https://s3-us-west-2.amazonaws.com");
+//            urlConnection.setRequestProperty("X-Requested-With", "XMLHttpRequest");
+//            urlConnection.setRequestProperty("USER-AGENT", "Mozilla/5.0 (Windows " +
+//                    "NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) " +
+//                    "Chrome/48.0.2564.116 Safari/537.36");
+//            urlConnection.setRequestProperty("Content-Type","application/x-www-form-urlencoded");
+//            urlConnection.setRequestProperty("Accept-Encoding", "gzip, deflate");
+//            urlConnection.setRequestProperty("ACCEPT-LANGUAGE", "en-US;" +
+//                    "q=0.6,en;q=0.4");
             InputStream stream = urlConnection.getInputStream();
             InputStreamReader reader = new InputStreamReader(stream);
             BufferedReader bufferedReader = new BufferedReader(reader);

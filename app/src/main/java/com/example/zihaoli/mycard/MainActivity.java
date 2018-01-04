@@ -15,7 +15,7 @@ import java.util.ArrayList;
 public class MainActivity extends FragmentActivity {
     private ViewPager viewPager;
     private FragmentManager fragmentManager;
-
+    private MyHandler handler = new MyHandler();
     private class MyHandler extends Handler {
         @Override
         public void handleMessage(Message msg) {
@@ -56,24 +56,25 @@ public class MainActivity extends FragmentActivity {
         fragmentManager = getSupportFragmentManager();
         viewPager = (ViewPager)this.findViewById(R.id.vpPersonList) ;
         final MyHandler handler = new MyHandler();
-
+        new Thread(r).start();
 
         //path = https://s3-us-west-2.amazonaws.com/udacity-mobile-interview/CardData.json
-        Runnable r = new Runnable() {
-            @Override
-            public void run() {
-                ArrayList<Person> personList = new ArrayList<>();
-                String path = "https://s3-us-west-2.amazonaws.com/udacity-mobile-interview/CardData.json";
-                String jsonString = Util.getJson(path);
-                personList = Util.parseJson(jsonString);
-                if(personList != null){
-                    Message msg = handler.obtainMessage();
-                    msg.obj = personList;
-                    handler.sendMessage(msg);
-                }
 
-            }
-        };
-        r.run();
+
     }
+    Runnable r = new Runnable() {
+        @Override
+        public void run() {
+            ArrayList<Person> personList = new ArrayList<>();
+            String path = "https://s3-us-west-2.amazonaws.com/udacity-mobile-interview/CardData.json";
+            String jsonString = Util.getJson(path);
+            personList = Util.parseJson(jsonString);
+            if(personList != null){
+                Message msg = handler.obtainMessage();
+                msg.obj = personList;
+                handler.sendMessage(msg);
+            }
+
+        }
+    };
 }

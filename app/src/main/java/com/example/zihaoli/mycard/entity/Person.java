@@ -38,27 +38,27 @@ public class Person {
     }
 
     public String getLastName() {
-        return lastName;
+        return "lastName:"+ lastName;
     }
 
     public String getFirstName() {
-        return firstName;
+        return "firstName:"+ firstName;
     }
 
     public String getEmail() {
-        return email;
+        return "email:\n"+ email;
     }
 
     public String getCompany(){
-        return company;
+        return "company:\n"+company;
     }
 
     public String getStartDate() {
-        return startDate;
+        return "startDate:\n"+startDate;
     }
 
     public String getBio() {
-        return bio;
+        return "bio:\n"+bio;
     }
 
     public String getAvatar() {
