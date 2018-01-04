@@ -12,9 +12,9 @@ import java.util.ArrayList;
 
 public class MyFragmentAdapter extends FragmentPagerAdapter {
 
-    private ArrayList<Fragment> fragmentList;
+    private ArrayList<MyFragment> fragmentList;
 
-    public MyFragmentAdapter(FragmentManager fm, ArrayList<Fragment> fragmentList) {
+    public MyFragmentAdapter(FragmentManager fm, ArrayList<MyFragment> fragmentList) {
         super(fm);
         // TODO Auto-generated constructor stub
         this.fragmentList=fragmentList;
